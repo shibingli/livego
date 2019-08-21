@@ -1,15 +1,15 @@
 package flv
 
 import (
+	"flag"
+	"livego/av"
+	"livego/protocol/amf"
+	"livego/utils/pio"
+	"livego/utils/uid"
+	"log"
+	"os"
 	"strings"
 	"time"
-	"flag"
-	"os"
-	"log"
-	"github.com/gwuhaolin/livego/utils/uid"
-	"github.com/gwuhaolin/livego/protocol/amf"
-	"github.com/gwuhaolin/livego/av"
-	"github.com/gwuhaolin/livego/utils/pio"
 )
 
 var (
@@ -45,7 +45,7 @@ const (
 )
 
 type FLVWriter struct {
-	Uid             string
+	Uid string
 	av.RWBaser
 	app, title, url string
 	buf             []byte

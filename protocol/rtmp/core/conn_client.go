@@ -10,8 +10,8 @@ import (
 	neturl "net/url"
 	"strings"
 
-	"github.com/gwuhaolin/livego/protocol/amf"
-	"github.com/gwuhaolin/livego/av"
+	"livego/av"
+	"livego/protocol/amf"
 	"log"
 )
 
@@ -180,7 +180,7 @@ func (connClient *ConnClient) writeCreateStreamMsg() error {
 		}
 
 		if err == ErrFail {
-			log.Println("writeCreateStreamMsg readRespMsg err=%v", err)
+			log.Printf("writeCreateStreamMsg readRespMsg err=%v", err)
 			return err
 		}
 	}

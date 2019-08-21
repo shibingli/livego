@@ -2,14 +2,14 @@ package core
 
 import (
 	"encoding/binary"
+	"livego/utils/pio"
+	"livego/utils/pool"
 	"net"
 	"time"
-	"github.com/gwuhaolin/livego/utils/pool"
-	"github.com/gwuhaolin/livego/utils/pio"
 )
 
 const (
-	_                     = iota
+	_ = iota
 	idSetChunkSize
 	idAbortMessage
 	idAck
