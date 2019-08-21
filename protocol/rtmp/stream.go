@@ -400,6 +400,5 @@ func (s *Stream) closeInter() {
 				log.Printf("[%v] player closed and remove\n", v.w.Info())
 			}
 		}
-
 	}
 }
